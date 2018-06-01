@@ -1,0 +1,38 @@
+<!--
+  Generated template for the RegisterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Registrar</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <form (ngSubmit)="solicitar()" #formulario="ngForm">
+      <h5>É preciso de um login liberado pela empresa!</h5>
+        <ion-item>
+          <ion-label floating>Nome / Empresa:</ion-label>
+          <ion-input [(ngModel)]="nome" name="nome"></ion-input>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label floating>Email:</ion-label>
+          <ion-input [(ngModel)]="email" name="email"></ion-input>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label floating>Telefone:</ion-label>
+          <ion-input [(ngModel)]="telefone" name="telefone"></ion-input>
+        </ion-item>
+    </form>
+  <br>
+  <br>
+    <button ion-button (click)="formulario.ngSubmit.emit()">Enivar Solicitação</button>
+
+</ion-content>

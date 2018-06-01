@@ -1,0 +1,47 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>RX25T</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item-group>
+    <ion-item-divider color="light">
+      <ion-icon name="ios-eye"></ion-icon>
+      Escavadeira Hidráulica
+    </ion-item-divider>
+  </ion-item-group>
+  <br>
+  <ion-item-group (click)="favoritRotator()">
+    <ion-item-divider color="light">
+      <ion-icon name="ios-eye"></ion-icon>
+      RX25T
+    </ion-item-divider>
+  </ion-item-group>
+  <br>
+  <ion-slides pager="true">
+  <ion-slide>
+    <img src="http://potenzaindustria.com.br/wp-content/gallery/rx25t/Rotator-RX25T-Potenza.png"/>
+  </ion-slide>
+  <ion-slide>
+    <img src="http://potenzaindustria.com.br/wp-content/gallery/rx25t/Rotator-RX25T-High-Torque.png"/>
+  </ion-slide>
+  </ion-slides>
+  
+  <br>
+  <ion-item-group>
+  <ion-item-divider color="light">
+    <ion-icon name="ios-eye"></ion-icon>
+    Dados Técnicos
+  </ion-item-divider>
+  <ion-item>Peso : 220 kg</ion-item>
+  <ion-item>Carga Máxima : 45.00 kg</ion-item>
+  <ion-item>Rotação : Contínua</ion-item>
+  </ion-item-group>
+  <button ion-button block outline ng-click="openPDF('http://potenzaindustria.com.br/wp-content/uploads/2017/10/Informativo-T%C3%A9cnico-RX25T.pdf','')">Catálogode Peças</button> 
+  <button ion-button block outline ng-click="openPDF('http://potenzaindustria.com.br/wp-content/uploads/2017/10/Informativo-T%C3%A9cnico-RX25T.pdf','')">Informativo Técnico</button> 
+  <button ion-button block outline ng-click="openPDF('http://potenzaindustria.com.br/wp-content/uploads/2017/10/Informativo-T%C3%A9cnico-RX25T.pdf','')">Manual do Usuário</button>
+</ion-content>

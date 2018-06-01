@@ -1,0 +1,56 @@
+<ion-header>
+  
+</ion-header>
+
+<ion-menu [content]="mycontent">
+    <ion-header>
+            <ion-toolbar>
+              <ion-title>Menu</ion-title>
+            </ion-toolbar>
+          </ion-header>
+          <ion-content>
+            <ion-list>
+              <button ion-item>
+                Home
+              </button>
+              <button ion-item (click)="openNotificacoesPage(NotificacoesPage)">
+                Notificações
+              </button>
+              <button ion-item (click)="openSegmentosPage(SegmentosPage)">
+                Catálogo de Peças
+              </button>
+              <button ion-item (click)="openSegmentosPage(informativoPage)">
+                Informativo Técnico
+              </button>
+              <button ion-item (click)="openSegmentosPage(manualPage)">
+                Manual do Usuário
+              </button>
+              <button ion-item (click)="openPerguntasFrequentesPage(PerguntasFrequentesPage)">
+                Perguntas Frequentes
+              </button>
+              <button ion-item (click)="openPage(ajudaPage)">
+                Ajuda
+              </button>
+            </ion-list>
+          </ion-content>
+  </ion-menu>
+  
+  
+  <ion-nav #mycontent [root]="rootPage"></ion-nav>
+
+<ion-content padding>
+  <h3>Notícias</h3>
+  <h4 ng-href="http://www.painelflorestal.com.br/noticias/voce-e-a-floresta/praticas-de-manejo-sustentavel-da-
+  fibria-contribuem-para-conservacao-da-biodiversidade-em-tres-lagoas">Práticas de manejo sustentável da Fibria
+   contribuem para conservação da biodiversidade em Três Lagoas (MS)</h4>
+  <h6>A Fibria, empresa brasileira e líder mundial na produção de celulose de eucalipto a partir de florestas
+     plantadas, desenvolve um trabalho de monitoramento da biodiversidade...</h6>
+  <br/>
+  <h4>Exportações de madeira crescem apesar da redução no faturamento</h4>
+  <h6>Set  or está atento aos custos de produção, alta oferta de produtos no mercado internacional 
+    e possíveis variações do câmbio...</h6>
+  <br/>
+  <h4>Projeto de expansão da Eldorado Brasil pode ser retomado por multinacional</h4>
+  <h6>Paper Excellence diz que se mercado for positivo vai concluir projeto da segunda 
+    linha de celulose na cidade...</h6>
+  </ion-content>
