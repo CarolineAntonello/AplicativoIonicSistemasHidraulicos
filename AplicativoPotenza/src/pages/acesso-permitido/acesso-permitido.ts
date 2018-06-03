@@ -1,3 +1,4 @@
+import { AjudaPage } from './../ajuda/ajuda';
 import { PerguntasFrequentesPage } from './../perguntas-frequentes/perguntas-frequentes';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
@@ -21,7 +22,7 @@ export class AcessoPermitidoPage {
   }
   
   openPage(){
-    this.navCtrl.push(AcessoPermitidoPage.name);
+    this.navCtrl.push(AjudaPage.name);
   }
   
   openSegmentosPage(){

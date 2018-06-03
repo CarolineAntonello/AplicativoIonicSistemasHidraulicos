@@ -1,5 +1,5 @@
 <ion-header>
-    <ion-title>menu</ion-title>
+    <ion-title></ion-title>
 </ion-header>
 
 <ion-menu [content]="mycontent">
@@ -10,27 +10,31 @@
           </ion-header>
           <ion-content>
             <ion-list>
-              <button ion-item>
-                Home
-              </button>
-              <button ion-item (click)="openNotificacoesPage(NotificacoesPage)">
-                Notificações
-              </button>
+              
               <button ion-item (click)="openSegmentosPage(SegmentosPage)">
                 Catálogo de Peças
               </button>
+
               <button ion-item (click)="openSegmentosPage(informativoPage)">
                 Informativo Técnico
               </button>
+
               <button ion-item (click)="openSegmentosPage(manualPage)">
                 Manual do Usuário
               </button>
+
+              <button ion-item (click)="openNotificacoesPage(NotificacoesPage)">
+                Notificações
+              </button>
+
               <button ion-item (click)="openPerguntasFrequentesPage(PerguntasFrequentesPage)">
                 Perguntas Frequentes
               </button>
-              <button ion-item>
+
+              <button ion-item (click)="openPage(openPage)">
                 Ajuda
               </button>
+
             </ion-list>
           </ion-content>
   </ion-menu>

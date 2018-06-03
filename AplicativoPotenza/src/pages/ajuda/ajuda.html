@@ -1,0 +1,59 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Ajuda</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<!-- 
+<ion-content padding>
+  <ion-slides pager>
+
+    <ion-slide>
+      <img src="https://ionicframework.com/dist/preview-app/www/assets/img/ica-slidebox-img-1.png">
+      <h2>AQUI VOCÊ ENCONTRA AJUDA PARA UTILIZAR O APP</h2>
+    </ion-slide>
+  
+    <ion-slide>
+      <img src="https://ionicframework.com/dist/preview-app/www/assets/img/ica-slidebox-img-2.png">
+      <h2>AQUI VOCÊ ENCONTRA AJUDA PARA UTILIZAR O APP</h2>
+    </ion-slide>
+  
+    <ion-slide >
+      <img src="https://ionicframework.com/dist/preview-app/www/assets/img/ica-slidebox-img-3.png">
+      <h2>AQUI VOCÊ ENCONTRA AJUDA PARA UTILIZAR O APP</h2>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="https://ionicframework.com/dist/preview-app/www/assets/img/ica-slidebox-img-4.png">
+      <h2>AQUI VOCÊ ENCONTRA AJUDA PARA UTILIZAR O APP</h2>
+    </ion-slide>
+  
+  </ion-slides>
+</ion-content> -->
+<ion-content class="tutorial-page">
+
+  <ion-slides pager>
+    <ion-slide *ngFor="let slide of slides">
+      <ion-toolbar>
+        <ion-buttons end>
+          <button ion-button color="primary">Skip</button>
+        </ion-buttons>
+      </ion-toolbar>
+      <img [src]="slide.image" class="slide-image"/>
+      <h2 class="slide-title" [innerHTML]="slide.title"></h2>
+      <p [innerHTML]="slide.description"></p>
+    </ion-slide>
+    <ion-slide>
+      <ion-toolbar>
+      </ion-toolbar>
+      <img src="https://ionicframework.com/dist/preview-app/www/assets/img/ica-slidebox-img-4.png" class="slide-image"/>
+      <h2 class="slide-title">Ready to Play?</h2>
+      <button ion-button large clear icon-end color="primary">
+        Continue
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
