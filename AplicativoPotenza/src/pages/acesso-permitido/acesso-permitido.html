@@ -1,5 +1,5 @@
 <ion-header>
-  
+    <ion-title>menu</ion-title>
 </ion-header>
 
 <ion-menu [content]="mycontent">
@@ -28,7 +28,7 @@
               <button ion-item (click)="openPerguntasFrequentesPage(PerguntasFrequentesPage)">
                 Perguntas Frequentes
               </button>
-              <button ion-item (click)="openPage(ajudaPage)">
+              <button ion-item>
                 Ajuda
               </button>
             </ion-list>
@@ -39,18 +39,139 @@
   <ion-nav #mycontent [root]="rootPage"></ion-nav>
 
 <ion-content padding>
-  <h3>Notícias</h3>
-  <h4 ng-href="http://www.painelflorestal.com.br/noticias/voce-e-a-floresta/praticas-de-manejo-sustentavel-da-
-  fibria-contribuem-para-conservacao-da-biodiversidade-em-tres-lagoas">Práticas de manejo sustentável da Fibria
-   contribuem para conservação da biodiversidade em Três Lagoas (MS)</h4>
-  <h6>A Fibria, empresa brasileira e líder mundial na produção de celulose de eucalipto a partir de florestas
-     plantadas, desenvolve um trabalho de monitoramento da biodiversidade...</h6>
-  <br/>
-  <h4>Exportações de madeira crescem apesar da redução no faturamento</h4>
-  <h6>Set  or está atento aos custos de produção, alta oferta de produtos no mercado internacional 
-    e possíveis variações do câmbio...</h6>
-  <br/>
-  <h4>Projeto de expansão da Eldorado Brasil pode ser retomado por multinacional</h4>
-  <h6>Paper Excellence diz que se mercado for positivo vai concluir projeto da segunda 
-    linha de celulose na cidade...</h6>
+  <ion-fab top right bottom>
+      <button ion-fab mini color="light"><ion-icon name="add"></ion-icon></button>
+      <ion-fab-list>
+        <button ion-fab ng-href="https://www.facebook.com/PotenzaIndustria/"><ion-icon name="logo-facebook"></ion-icon></button>
+        <button ion-fab ng-href="https://www.linkedin.com/in/potenza-equipamentos-hidraulicos-057564127/"><ion-icon name="logo-linkedin"></ion-icon></button>
+        <button ion-fab ng-href="https://www.youtube.com/PotenzaIndustria"><ion-icon name="logo-youtube"></ion-icon></button>
+      </ion-fab-list>
+    </ion-fab>
+
+    <ion-card>
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="https://scontent.fcwb1-1.fna.fbcdn.net/v/t1.0-9/19884395_806183726221862_8529191841367891212_n.jpg?_nc_cat=0&oh=44beda7f260e9a58aa62995a28398e16&oe=5BBFA9D1">
+          </ion-avatar>
+          <h2>Potenza</h2>
+          <p>22 Fevereiro, 2018</p>
+        </ion-item>
+      
+        <img src="https://scontent.fcwb1-1.fna.fbcdn.net/v/t1.0-9/28167057_919383931568507_1004722398115879155_n.jpg?_nc_cat=0&_nc_eui2=AeHjJNu94ZiyJn7rgEp9KbUNbRPbomQb_7Ou6jxd4zW_ZkXStpB8s2N6xiKdxcc1jZujAQGrMyRWj-4013ZXQLwH4PMVX1RHRv0q_-WU3Q6p4w&oh=8ff4e24e5781e496efc7cdd6d63d5516&oe=5BB3C2F9">
+      
+        <ion-card-content>
+          <h2>Bom dia Parceiros!!! Boas Notícias!
+              A Potenza lança seu novo Rotator RP500. Esqueça as soluções existentes no mercado. Quebramos os paradigmas e reinventamos os conceitos de rotatores.
+              Muito mais eficiente, muito mais resistente.
+              #PotenzaIndustria, #Rotatores #NovoRP500 #MaisProdução #MaisResistência #ReduçãoDeCustos</h2>
+        </ion-card-content>
+      
+        <ion-row>
+          <ion-col>
+            <button ion-button icon-left clear small>
+              <ion-icon name="thumbs-up"></ion-icon>
+              <div>12 Likes</div>
+            </button>
+          </ion-col>
+          <ion-col>
+            <button ion-button icon-left clear small>
+              <ion-icon name="text"></ion-icon>
+              <div>4 Comments</div>
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+
+    <ion-card>
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="http://www.eficientesf.com.br/img/FloretApp.png">
+          </ion-avatar>
+          <h2>Painel Florestal</h2>
+          <p>02 Junho, 2018</p>
+        </ion-item>
+      
+        <img src="http://www.painelflorestal.com.br/media/images/3311/11503//5aff3ed65fe1209a88ebef1c1fe8edb7f42cc052513ea.jpg">
+      
+        <ion-card-content>
+          <h2>Práticas de manejo sustentável da Fibria contribuem para conservação da biodiversidade em Três Lagoas (MS)</h2>
+        </ion-card-content>
+      
+        <ion-row>
+          <ion-col>
+            <button ion-button icon-left clear small>
+              <ion-icon name="thumbs-up"></ion-icon>
+              <div>12 Likes</div>
+            </button>
+          </ion-col>
+          <ion-col>
+            <button ion-button icon-left clear small>
+              <ion-icon name="text"></ion-icon>
+              <div>4 Comments</div>
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+
+      <ion-card>
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="http://www.eficientesf.com.br/img/FloretApp.png">
+            </ion-avatar>
+            <h2>Painel Florestal</h2>
+            <p>30 Maio, 2018</p>
+          </ion-item>
+        
+          <img src="http://www.painelflorestal.com.br/media/images/3310/11502//5aff3dfb86f492b57d1bbb51603f78347e2428e534463.jpg">
+        
+          <ion-card-content>
+            <h2>Ecofuturo e Suzano recebem membros da ISEAL Alliance no Parque das Neblinas</h2>
+          </ion-card-content>
+        
+          <ion-row>
+            <ion-col>
+              <button ion-button icon-left clear small>
+                <ion-icon name="thumbs-up"></ion-icon>
+                <div>12 Likes</div>
+              </button>
+            </ion-col>
+            <ion-col>
+              <button ion-button icon-left clear small>
+                <ion-icon name="text"></ion-icon>
+                <div>4 Comments</div>
+              </button>
+            </ion-col>
+          </ion-row>
+        </ion-card>
+
+        <ion-card>
+            <ion-item>
+              <ion-avatar item-start>
+                <img src="http://www.eficientesf.com.br/img/FloretApp.png">
+              </ion-avatar>
+              <h2>Painel Florestal</h2>
+              <p>18 Maio, 2018</p>
+            </ion-item>
+          
+            <img src="http://www.painelflorestal.com.br/media/images/3308/11500//5aec6fa1f2181409a383fb50f689f49dedb8e09e6faeb.jpg">
+          
+            <ion-card-content>
+              <h2>Relatório Fibria 2017: Uma floresta de oportunidades</h2>
+            </ion-card-content>
+          
+            <ion-row>
+              <ion-col>
+                <button ion-button icon-left clear small>
+                  <ion-icon name="thumbs-up"></ion-icon>
+                  <div>12 Likes</div>
+                </button>
+              </ion-col>
+              <ion-col>
+                <button ion-button icon-left clear small>
+                  <ion-icon name="text"></ion-icon>
+                  <div>4 Comments</div>
+                </button>
+              </ion-col>
+            </ion-row>
+          </ion-card>
   </ion-content>

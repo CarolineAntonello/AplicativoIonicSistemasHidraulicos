@@ -6,14 +6,14 @@
 
 </ion-header>
 
-
+<!-- 
 <ion-content>
     <ion-list>
       <ion-item-divider (click)="openAcessoPageFlorestal(AcessoPage)">
           <ion-title >Florestais</ion-title>
       </ion-item-divider>
       <br/>
-      <ion-item-divider  (click)="openAcessoPageSucata(AcessoSucataPage)">
+      <ion-item-divider (click)="openAcessoPageSucata(AcessoSucataPage)">
           <ion-title>Sucateiras</ion-title>
       </ion-item-divider>
       <br/>
@@ -22,4 +22,26 @@
       </ion-item-divider>
     </ion-list> 
 
-</ion-content>
+</ion-content> -->
+
+<ion-content class="card-background-page">
+
+    <ion-card (click)="openAcessoPageFlorestal(AcessoPage)">
+      <img src="https://i2.wp.com/potenzaindustria.com.br/wp-content/uploads/2017/10/Biomassa-Potenza.jpg"/>
+      <div class="card-title">FLORESTAL</div>
+      <div class="card-subtitle">50 modelos</div>
+    </ion-card>
+  
+    <ion-card (click)="openAcessoPageSucata(AcessoSucataPage)">
+      <img src="https://static.ilocal.com.br//uploads/title_template_photo/Url/60739/size_241x180_photo.png"/>
+      <div class="card-title">SUCATEIRA</div>
+      <div class="card-subtitle">64 modelos</div>
+    </ion-card>
+  
+    <ion-card (click)="openAcessoPageRotator(AcessoRotatorPage)">
+      <img src="http://hidrauberto.com.br/wp-content/uploads/2014/03/rotatores-hidraulicos.png"/>
+      <div class="card-title">ROTATORES</div>
+      <div class="card-subtitle">10 modelos</div>
+    </ion-card>
+      
+      </ion-content>
