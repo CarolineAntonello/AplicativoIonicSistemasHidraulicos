@@ -1,5 +1,5 @@
 
-var app = angular.module('controllers.AppCtrl', []);
+var app = angular.module('myApp', []);
 
 app.controller('AppCtrl', function ($scope, MaterialsService) {
 
@@ -16,6 +16,10 @@ $scope.openPDF = function(url, link_type) {
             }
         }
 
-        var ref = window.open(url, '_system', 'location=no');
+        var ref = window.open(url, '_system', 'location=yes');
     }                                           
 });
+
+//openURL(url) {
+//    InAppBrowser.open(url,'_system','location=yes');
+//}

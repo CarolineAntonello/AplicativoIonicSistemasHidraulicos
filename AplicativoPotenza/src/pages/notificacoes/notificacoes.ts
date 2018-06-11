@@ -50,7 +50,7 @@ export class NotificacoesPage {
       inputs: [
         {
           name: 'modelo do produto',
-          placeholder: 'modelo do produto'
+          placeholder: 'modelo do produto',
         }
       ],
       buttons: [

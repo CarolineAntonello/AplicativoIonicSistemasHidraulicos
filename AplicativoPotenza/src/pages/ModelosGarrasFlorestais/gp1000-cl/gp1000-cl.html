@@ -50,7 +50,10 @@
       <ion-item>Peso : 1.320 kg</ion-item>
       <ion-item>Carga Máxima : 12.500 kg</ion-item>
     </ion-item-group>
-    <button ion-button block outline ng-click="openPDF('http://potenzaindustria.com.br/wp-content/uploads/2017/10/Informativo-T%C3%A9cnico-GD1000CL.pdf','')">Catálogode Peças</button> 
+    
+    <div ng-app="myApp" ng-controller="AppCtrl">
+    <button ion-button block outline ng-click="openPDF('http://potenzaindustria.com.br/wp-content/uploads/2017/10/Informativo-T%C3%A9cnico-GD1000CL.pdf','')">Catálogo de Peças</button> 
     <button ion-button block outline ng-click="openPDF('http://potenzaindustria.com.br/wp-content/uploads/2017/10/Informativo-T%C3%A9cnico-GD1000CL.pdf','')">Informativo Técnico</button> 
     <button ion-button block outline ng-click="openPDF('http://potenzaindustria.com.br/wp-content/uploads/2017/10/Informativo-T%C3%A9cnico-GD1000CL.pdf','')">Manual do Usuário</button> 
-</ion-content>
+  </div>
+  </ion-content>
