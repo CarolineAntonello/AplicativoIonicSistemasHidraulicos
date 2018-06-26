@@ -3,8 +3,8 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { RegisterPage } from '../register/register';
 import { User } from '../../models/user';
-import { AcessoPage } from '../acesso/acesso';
 import { LoadingController } from 'ionic-angular';
+import{ AngularFireAuth } from 'angularfire2/auth';
 
 @Component({
   selector: 'page-login',
@@ -14,8 +14,20 @@ export class LoginPage {
 
   user = {} as User;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,
+  constructor(private afAuth: AngularFireAuth,
+    public navCtrl: NavController, public navParams: NavParams,
     public loadingCtrl: LoadingController) {
+  }
+
+  async login(user: User){
+    try{
+      const result = this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password);
+      console.log(result);
+        this.navCtrl.push(AcessoPermitidoPage.name);
+    }
+    catch(e){
+      console.error(e);
+    }
   }
 
   presentLoading() {

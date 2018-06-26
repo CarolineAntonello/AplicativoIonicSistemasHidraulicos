@@ -9,7 +9,6 @@ import { Fl42Page } from '../ModelosGarrasFlorestais/fl42/fl42';
 import { Gp800ClPage } from '../ModelosGarrasFlorestais/gp800-cl/gp800-cl';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { AcessoPermitidoPage } from '../acesso-permitido/acesso-permitido';
 import { Gp1000ClPage } from '../ModelosGarrasFlorestais/gp1000-cl/gp1000-cl';
 import { Fl37RPage } from '../ModelosGarrasFlorestais/fl37-r/fl37-r';
 import { Ga650Page } from '../ModelosGarrasFlorestais/ga650/ga650';

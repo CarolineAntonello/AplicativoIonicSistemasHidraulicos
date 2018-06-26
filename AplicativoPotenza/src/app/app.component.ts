@@ -1,11 +1,8 @@
 import { Component } from '@angular/core';
-import { Platform, NavController, NavParams } from 'ionic-angular';
+import { Platform} from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
 import { TabsPage } from '../pages/tabs/tabs';
-import { AcessoPermitidoPage } from '../pages/acesso-permitido/acesso-permitido';
-import { AcessoPage } from '../pages/acesso/acesso';
 
 @Component({
   templateUrl: 'app.html'

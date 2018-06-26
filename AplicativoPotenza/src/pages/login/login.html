@@ -10,15 +10,15 @@
   
   <ion-item>
     <ion-label floating>Endereço de e-mail:</ion-label>
-    <ion-input></ion-input>
+    <ion-input type="text" [(ngModel)]="user.email"></ion-input>
   </ion-item>
 
   <ion-item>
       <ion-label floating>Sua senha:</ion-label>
-      <ion-input></ion-input>
+      <ion-input type="password" [(ngModel)]="user.password"></ion-input>
   </ion-item>
   <br>
   <br>
-  <button ion-button block (click)="presentLoading()">Entrar</button>
+  <button ion-button block (click)="login(user)">Entrar</button>
   <button ion-button block color="light" (click)="registrar()">Registrar</button>
 </ion-content>

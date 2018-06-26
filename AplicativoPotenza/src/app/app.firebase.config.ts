@@ -6,4 +6,5 @@ export const FIREBASE_CONFIG = {
     storageBucket: "potenzaapp-5e072.appspot.com",
     messagingSenderId: "344997647016"
   };
+
  
