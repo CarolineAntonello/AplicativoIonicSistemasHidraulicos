@@ -1,12 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the RegisterPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -19,13 +12,48 @@ export class RegisterPage {
   public email: string = '';
   public telefone: string = '';
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController) {
   }
 
-  solicitar(){
-    console.log(this.nome);
-    console.log(this.email);
-    console.log(this.telefone);
+  confirmacao(){
+    if(this.nome == '' || this.email == ''){
+      let alert = this.alertCtrl.create({
+        title: 'Alerta!',
+        message: 'É preciso ter um nome e um email para ser enviado uma solicitação!',
+        buttons: [
+          {
+            text: 'Okay',
+            handler: () => {
+              console.log('Okay selecionado');
+            }
+          }
+        ]
+      });
+      alert.present();
+
+    }else {
+      let alert = this.alertCtrl.create({
+        title: 'Confirme o envio',
+        message: this.nome+ ' confirma o envio da solicitação para o email '+ this.email +'?',
+        buttons: [
+          {
+            text: 'Não',
+            role: 'cancel',
+            handler: () => {
+              console.log('Nao selecionado');
+            }
+          },
+          {
+            text: 'Sim',
+            handler: () => {
+              console.log('Sim selecionado');
+            }
+          }
+        ]
+      });
+      alert.present();
+    }
+    
   }
 
   ionViewDidLoad() {

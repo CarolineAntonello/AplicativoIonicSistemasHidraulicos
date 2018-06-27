@@ -1,6 +1,6 @@
 import { AcessoPermitidoPage } from './../acesso-permitido/acesso-permitido';
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, AlertController } from 'ionic-angular';
 import { RegisterPage } from '../register/register';
 import { User } from '../../models/user';
 import { LoadingController } from 'ionic-angular';
@@ -16,17 +16,33 @@ export class LoginPage {
 
   constructor(private afAuth: AngularFireAuth,
     public navCtrl: NavController, public navParams: NavParams,
-    public loadingCtrl: LoadingController) {
+    public loadingCtrl: LoadingController, private alertCtrl: AlertController) {
   }
 
   async login(user: User){
-    try{
-      const result = this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password);
-      console.log(result);
-        this.navCtrl.push(AcessoPermitidoPage.name);
-    }
-    catch(e){
-      console.error(e);
+    if(user.email == null || user.password == null){
+      let alert = this.alertCtrl.create({
+        title: 'Alerta!',
+        message: 'É preciso de um e-mail e senha para realizar o login!',
+        buttons: [
+          {
+            text: 'Okay',
+            handler: () => {
+              console.log('Okay selecionado');
+            }
+          }
+        ]
+      });
+      alert.present();
+    }else {
+      try{
+        const result = this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password);
+        console.log(result);
+          this.navCtrl.push(AcessoPermitidoPage.name);
+      }
+      catch(e){
+        console.error(e);
+      }
     }
   }
 
