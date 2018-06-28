@@ -24,19 +24,22 @@ export class AjudaPage {
 
   slides = [
     {
-      title: "Welcome to the Docs!",
-      description: "The <b>Ionic Component Documentation</b> showcases a number of useful components that are included out of the box with Ionic.",
-      image: "https://ionicframework.com/dist/preview-app/www/assets/img/ica-slidebox-img-1.png",
+      title: "Bem vindo ao PotenzaApp",
+      description: "Aqui você encontra os catálogo de peças, manuais de usuário e informativos técnicos para seu modelo de produto.",
+      //image: "https://ionicframework.com/dist/preview-app/www/assets/img/ica-slidebox-img-1.png",
+      image : "assets/imgs/AjudaImg1.jpg"
     },
     {
-      title: "What is Ionic?",
-      description: "<b>Ionic Framework</b> is an open source SDK that enables developers to build high quality mobile apps with web technologies like HTML, CSS, and JavaScript.",
-      image: "https://ionicframework.com/dist/preview-app/www/assets/img/ica-slidebox-img-2.png",
+      title: "Como faço para ter acesso?",
+      description: "Para acessar o aplicativo é preciso de um login liberado pela empresa, caso não tenha, é só ir clicar no botão registrar e preencher os campos que e a empresa será informada pela sua solicitação!",
+      //image: "https://ionicframework.com/dist/preview-app/www/assets/img/ica-slidebox-img-2.png",
+      image : "assets/imgs/AjudaImg2.jpg"
     },
     {
-      title: "What is Ionic Cloud?",
-      description: "The <b>Ionic Cloud</b> is a cloud platform for managing and scaling Ionic apps with integrated services like push notifications, native builds, user auth, and live updating.",
-      image: "https://ionicframework.com/dist/preview-app/www/assets/img/ica-slidebox-img-3.png",
+      title: "Como encontro os manuais, catálogos e informativos?",
+      description: "Basta puxar o menu da lateral esquerda e escolher o que precisa, estão separados em segmentos para melhor lhe atender e facilitar.",
+      //image: "https://ionicframework.com/dist/preview-app/www/assets/img/ica-slidebox-img-3.png",
+      image : "assets/imgs/AjudaImg3.jpg"
     }
   ];
 
