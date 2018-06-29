@@ -29,15 +29,16 @@
   </ion-item-group>
 <br>
 <ion-slides pager="true">
+  <!--São as mesmas imagens que a GP25R e GP30R-->
   <ion-slide>
-    <img src="http://potenzaindustria.com.br/wp-content/gallery/gp30r/GD25R-GD30R-GD37R-Garra-Florestal-Fechada.png"/>
-  </ion-slide>
-  <ion-slide>
-    <img src="http://potenzaindustria.com.br/wp-content/gallery/gp30r/GD25R-GD30R-GD37R-Garra-Florestal-Aberta.png"/>
-  </ion-slide>
-  <ion-slide>
-    <img src="http://potenzaindustria.com.br/wp-content/gallery/gp30r/GD25R-GD30R-GD37R-Garra-Florestal-Fechada.png">
-  </ion-slide>
+      <img src="assets/imgs/Florestal/GP25R/GP25RGarraFlorestalAberta.png"/>
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/imgs/Florestal/GP25R/GP25RGarraFlorestalFechada.png"/>
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/imgs/Florestal/GP25R/GP25RGarraFlorestalAberta.png">
+    </ion-slide>
 </ion-slides>
 
 <br>
@@ -50,7 +51,7 @@
   <ion-item>Peso : 220 kg</ion-item>
   <ion-item>Carga Máxima : 4.500 kg</ion-item>
 </ion-item-group>
-<button ion-button block outline ng-click="openPDF('http://potenzaindustria.com.br/wp-content/uploads/2017/11/Informativo-T%C3%A9cnico-GP37R.pdf','')">Catálogode Peças</button> 
-<button ion-button block outline ng-click="openPDF('http://potenzaindustria.com.br/wp-content/uploads/2017/11/Informativo-T%C3%A9cnico-GP37R.pdf','')">Informativo Técnico</button> 
-<button ion-button block outline ng-click="openPDF('http://potenzaindustria.com.br/wp-content/uploads/2017/11/Informativo-T%C3%A9cnico-GP37R.pdf','')">Manual do Usuário</button>
+<button ion-button block outline (click)="openLoadPdf()">Catálogode Peças</button> 
+<button ion-button block outline (click)="openLoadPdf()">Informativo Técnico</button> 
+<button ion-button block outline (click)="openLoadPdf()">Manual do Usuário</button>
 </ion-content>

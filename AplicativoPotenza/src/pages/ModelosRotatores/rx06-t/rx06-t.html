@@ -13,7 +13,7 @@
     </ion-item-divider>
   </ion-item-group>
   <br>
-  <ion-item-group (click)="favoritRotator()">
+  <ion-item-group>
     <ion-item-divider color="light">
       <ion-icon name="ios-eye"></ion-icon>
       RX06T
@@ -22,13 +22,13 @@
   <br>
   <ion-slides pager="true">
   <ion-slide>
-    <img src="http://potenzaindustria.com.br/wp-content/gallery/rx06t/RX06T_2.png"/>
+    <img src="assets/imgs/Rotator/RX06T/rx06t1.png"/>
   </ion-slide>
   <ion-slide>
-    <img src="http://potenzaindustria.com.br/wp-content/gallery/rx06t/RX06T.png"/>
+    <img src="assets/imgs/Rotator/RX06T/rx06t2.png"/>
   </ion-slide>
   <ion-slide>
-    <img src="http://potenzaindustria.com.br/wp-content/gallery/rx06t/Rotator-RX06T-Potenza.JPG"/>
+    <img src="assets/imgs/Rotator/RX06T/rx06t3.JPG"/>
   </ion-slide>
   </ion-slides>
   
@@ -42,7 +42,7 @@
   <ion-item>Carga Máxima : 6.000 kg</ion-item>
   <ion-item>Rotação : Ilimitado</ion-item>
   </ion-item-group>
-  <button ion-button block outline ng-click="openPDF('http://potenzaindustria.com.br/wp-content/uploads/2017/10/Informativo-T%C3%A9cnico-RX06T-1.pdf','')">Catálogode Peças</button> 
-  <button ion-button block outline ng-click="openPDF('http://potenzaindustria.com.br/wp-content/uploads/2017/10/Informativo-T%C3%A9cnico-RX06T-1.pdf','')">Informativo Técnico</button> 
-  <button ion-button block outline ng-click="openPDF('http://potenzaindustria.com.br/wp-content/uploads/2017/10/Informativo-T%C3%A9cnico-RX06T-1.pdf','')">Manual do Usuário</button>
+  <button ion-button block outline (click)="openLoadPdf()">Catálogode Peças</button> 
+  <button ion-button block outline (click)="openLoadPdf()">Informativo Técnico</button> 
+  <button ion-button block outline (click)="openLoadPdf()">Manual do Usuário</button>
 </ion-content>

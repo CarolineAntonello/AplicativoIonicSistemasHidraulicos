@@ -24,13 +24,13 @@
 <br>
 <ion-slides pager="true">
   <ion-slide>
-    <img src="http://potenzaindustria.com.br/wp-content/gallery/gp60/GP60-AB.png"/>
+    <img src="assets/imgs/Florestal/GP60/gp60aberta.png"/>
   </ion-slide>
   <ion-slide>
-    <img src="http://potenzaindustria.com.br/wp-content/gallery/gp60/GP60-AR.png"/>
+    <img src="assets/imgs/Florestal/GP60/gp60area.png"/>
   </ion-slide>
   <ion-slide>
-    <img src="http://potenzaindustria.com.br/wp-content/gallery/gp60/GP60-F.png">
+    <img src="assets/imgs/Florestal/GP60/gp60fechada.png">
   </ion-slide>
 </ion-slides>
 
@@ -44,7 +44,7 @@
   <ion-item>Peso : 600 kg</ion-item>
   <ion-item>Carga Máxima : 8.500 kg</ion-item>
 </ion-item-group>
-<button ion-button block outline ng-click="openPDF('http://potenzaindustria.com.br/wp-content/uploads/2017/10/Informativo-T%C3%A9cnico-GP60-1.pdf','')">Catálogode Peças</button> 
-<button ion-button block outline ng-click="openPDF('http://potenzaindustria.com.br/wp-content/uploads/2017/10/Informativo-T%C3%A9cnico-GP60-1.pdf','')">Informativo Técnico</button> 
-<button ion-button block outline ng-click="openPDF('http://potenzaindustria.com.br/wp-content/uploads/2017/10/Informativo-T%C3%A9cnico-GP60-1.pdf','')">Manual do Usuário</button>
+<button ion-button block outline (click)="openLoadPdf()">Catálogode Peças</button> 
+<button ion-button block outline (click)="openLoadPdf()">Informativo Técnico</button> 
+<button ion-button block outline (click)="openLoadPdf()">Manual do Usuário</button>
 </ion-content>

@@ -22,10 +22,10 @@
 <br>
 <ion-slides pager="true">
   <ion-slide>
-    <img src="http://potenzaindustria.com.br/wp-content/gallery/gg1225/Garra-Sucateira-GG1225-Fechada.png"/>
+    <img src="assets/imgs/Sucata/GG1225/gg1225aberta.png"/>
   </ion-slide>
   <ion-slide>
-    <img src="http://potenzaindustria.com.br/wp-content/gallery/gg1225/Garra-Sucateira-GG1225-Aberta.png"/>
+    <img src="assets/imgs/Sucata/GG1225/gg1225fechada.png"/>
   </ion-slide>
 </ion-slides>
 
@@ -39,7 +39,7 @@
   <ion-item>Peso : 410 kg</ion-item>
   <ion-item>Pressão de Trabalho: 270 bar</ion-item>
 </ion-item-group>
-<button ion-button block outline ng-click="openPDF('http://potenzaindustria.com.br/wp-content/uploads/2017/12/Informativo-T%C3%A9cnico-GG1225.pdf','')">Catálogode Peças</button> 
-<button ion-button block outline ng-click="openPDF('http://potenzaindustria.com.br/wp-content/uploads/2017/12/Informativo-T%C3%A9cnico-GG1225.pdf','')">Informativo Técnico</button> 
-<button ion-button block outline ng-click="openPDF('http://potenzaindustria.com.br/wp-content/uploads/2017/12/Informativo-T%C3%A9cnico-GG1225.pdf','')">Manual do Usuário</button>
+<button ion-button block outline (click)="openLoadPdf()">Catálogode Peças</button> 
+<button ion-button block outline (click)="openLoadPdf()">Informativo Técnico</button> 
+<button ion-button block outline (click)="openLoadPdf()">Manual do Usuário</button>
 </ion-content>

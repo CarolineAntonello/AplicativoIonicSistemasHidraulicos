@@ -1,15 +1,7 @@
-<!--
-  Generated template for the Sg2004Page page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
   <ion-navbar>
     <ion-title>SG2004</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
@@ -30,10 +22,10 @@
 <br>
 <ion-slides pager="true">
   <ion-slide>
-    <img src="http://potenzaindustria.com.br/wp-content/gallery/gs2004/Garra-Sucateira-SG2004-Potenza.JPG"/>
+    <img src="assets/imgs/Sucata/SG2004/sg2004aberta.png"/>
   </ion-slide>
   <ion-slide>
-    <img src="http://potenzaindustria.com.br/wp-content/gallery/gs2004/SG2004.png"/>
+    <img src="assets/imgs/Sucata/SG2004/sg2004fechado.JPG"/>
   </ion-slide>
 </ion-slides>
 
@@ -47,7 +39,7 @@
   <ion-item>Peso : 2.070 kg</ion-item>
   <ion-item>Pressão de Trabalho: 280 bar</ion-item>
 </ion-item-group>
-<button ion-button block outline ng-click="openPDF('http://potenzaindustria.com.br/wp-content/uploads/2017/10/Informativo-T%C3%A9cnico-SG2004.pdf','')">Catálogode Peças</button> 
-<button ion-button block outline ng-click="openPDF('http://potenzaindustria.com.br/wp-content/uploads/2017/10/Informativo-T%C3%A9cnico-SG2004.pdf','')">Informativo Técnico</button> 
-<button ion-button block outline ng-click="openPDF('http://potenzaindustria.com.br/wp-content/uploads/2017/10/Informativo-T%C3%A9cnico-SG2004.pdf','')">Manual do Usuário</button>
+<button ion-button block outline (click)="openLoadPdf()">Catálogode Peças</button> 
+<button ion-button block outline (click)="openLoadPdf()">Informativo Técnico</button> 
+<button ion-button block outline (click)="openLoadPdf()">Manual do Usuário</button>
 </ion-content>

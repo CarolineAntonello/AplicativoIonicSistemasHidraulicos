@@ -13,7 +13,7 @@
     </ion-item-divider>
   </ion-item-group>
   <br>
-  <ion-item-group (click)="favoritRotator()">
+  <ion-item-group>
     <ion-item-divider color="light">
       <ion-icon name="ios-eye"></ion-icon>
       RX45T
@@ -22,7 +22,7 @@
   <br>
   <ion-slides pager="true">
   <ion-slide>
-    <img src="http://potenzaindustria.com.br/wp-content/gallery/rx45t/Rotator-RX45T-Potenza-1.png"/>
+    <img src="assets/imgs/Rotator/RX45T/rx45t.png"/>
   </ion-slide>
   </ion-slides>
   
@@ -36,7 +36,7 @@
   <ion-item>Carga Máxima : 45.00 kg</ion-item>
   <ion-item>Rotação : Contínua</ion-item>
   </ion-item-group>
-  <button ion-button block outline ng-click="openPDF('http://potenzaindustria.com.br/wp-content/uploads/2017/10/Informativo-T%C3%A9cnico-RX45T.pdf','')">Catálogode Peças</button> 
-  <button ion-button block outline ng-click="openPDF('http://potenzaindustria.com.br/wp-content/uploads/2017/10/Informativo-T%C3%A9cnico-RX45T.pdf','')">Informativo Técnico</button> 
-  <button ion-button block outline ng-click="openPDF('http://potenzaindustria.com.br/wp-content/uploads/2017/10/Informativo-T%C3%A9cnico-RX45T.pdf','')">Manual do Usuário</button>
+  <button ion-button block outline (click)="openLoadPdf()">Catálogode Peças</button> 
+  <button ion-button block outline (click)="openLoadPdf()">Informativo Técnico</button> 
+  <button ion-button block outline (click)="openLoadPdf()">Manual do Usuário</button>
 </ion-content>

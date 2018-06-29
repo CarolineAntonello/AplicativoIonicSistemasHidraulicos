@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ActionSheetController } from 'ionic-angular';
-
-/**
- * Generated class for the Rx06TPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { IonicPage, NavController, NavParams, ActionSheetController, Platform } from 'ionic-angular';
+import { FileTransfer } from '@ionic-native/file-transfer';
+import { File } from '@ionic-native/file';
+import { DocumentViewer, DocumentViewerOptions } from '@ionic-native/document-viewer';
 
 @IonicPage()
 @Component({
@@ -16,41 +12,30 @@ import { IonicPage, NavController, NavParams, ActionSheetController } from 'ioni
 export class Rx06TPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    public actionSheetCtrl: ActionSheetController) {
-  }
+    private document: DocumentViewer, private file: File,
+    private transfer: FileTransfer, private platform: Platform) {
+}
 
-  favoritRotator() {
-    let actionSheet = this.actionSheetCtrl.create({
-      title: 'Rotator',
-      buttons: [
-        {
-          text: 'Comprar Rotator',
-          role: 'comprar',
-          handler: () => {
-            console.log('Comprar clicked');
-          }
-        },
-        {
-          text: 'Favoritar',
-          handler: () => {
-            console.log('Favoritar clicked');
-          }
-        },
-        {
-          text: 'Cancelar',
-          role: 'cancelar',
-          handler: () => {
-            console.log('Cancel clicked');
-          }
-        }
-      ]
-    });
- 
-    actionSheet.present();
-  }
+openLoadPdf(){
+  const options: DocumentViewerOptions = {
+  title : "Informativo Tecnico RX06T"
+  };
+  this.document.viewDocument('assets/imgs/Rotator/RX06T/InformativoTecnicoRX06T.pdf','application/pdf', options);
+}
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad Rx06TPage');
-  }
+downloadPdf(){
+  let path = null;
+  if(this.platform.is('ios')){
+  path = this.file.documentsDirectory;
+  }else{
+  path = this.file.dataDirectory;
+}
+
+const transfer = this.transfer.create();
+transfer.download('http://potenzaindustria.com.br/wp-content/uploads/2017/10/Informativo-T%C3%A9cnico-RX06T-1.pdf', path + 'InformativoTecnicoRX06T.pdf').then(entry =>{
+let url = entry.toURL();
+this.document.viewDocument('assets/imgs/Rotator/RX06T/InformativoTecnicoRX06T.pdf', 'application.pdf', {});
+});
+}
 
 }
