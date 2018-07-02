@@ -33,7 +33,7 @@ downloadPdf(){
 
 const transfer = this.transfer.create();
 transfer.download('http://potenzaindustria.com.br/wp-content/uploads/2017/10/Informativo-T%C3%A9cnico-GP60-1.pdf', path + 'InformativoTecnicoGP60.pdf').then(entry =>{
-let url = entry.toURL();
+//let url = entry.toURL();
 this.document.viewDocument('assets/imgs/Florestal/GP60/InformativoTecnicoGP60.pdf', 'application.pdf', {});
 });
 }

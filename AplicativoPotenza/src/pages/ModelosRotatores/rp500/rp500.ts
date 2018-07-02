@@ -33,7 +33,7 @@ downloadPdf(){
 
 const transfer = this.transfer.create();
 transfer.download('http://potenzaindustria.com.br/wp-content/uploads/2018/02/Informativo-T%C3%A9cnico-RP500.pdf', path + 'InformativoTecnicoRP500.pdf').then(entry =>{
-let url = entry.toURL();
+//let url = entry.toURL();
 this.document.viewDocument('assets/imgs/Rotator/RP500/InformativoTecnicoRP500.pdf', 'application.pdf', {});
 });
 }

@@ -33,7 +33,7 @@ downloadPdf(){
 
 const transfer = this.transfer.create();
 transfer.download('http://potenzaindustria.com.br/wp-content/uploads/2017/11/Informativo-T%C3%A9cnico-GP37R.pdf', path + 'InformativoTecnicoGP37R.pdf').then(entry =>{
-let url = entry.toURL();
+//let url = entry.toURL();
 this.document.viewDocument('assets/imgs/Florestal/GP37R/InformativoTecnicoGP37R.pdf', 'application.pdf', {});
 });
 }

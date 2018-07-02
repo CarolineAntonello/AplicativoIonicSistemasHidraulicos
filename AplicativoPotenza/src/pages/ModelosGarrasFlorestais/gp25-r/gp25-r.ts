@@ -33,7 +33,7 @@ export class Gp25RPage {
 
     const transfer = this.transfer.create();
     transfer.download('http://potenzaindustria.com.br/wp-content/uploads/2017/11/Informativo-T%C3%A9cnico-GP25R.pdf', path + 'InformativoTecnicoGP25R.pdf').then(entry =>{
-      let url = entry.toURL();
+      //let url = entry.toURL();
       this.document.viewDocument('assets/imgs/Florestal/GP25R/InformativoTecnicoGP25R.pdf', 'application.pdf', {});
     });
   }

@@ -33,7 +33,7 @@ downloadPdf(){
 
 const transfer = this.transfer.create();
 transfer.download('http://potenzaindustria.com.br/wp-content/uploads/2017/12/Informativo-T%C3%A9cnico-GG1225.pdf', path + 'InformativoTecnicoGG1224.pdf').then(entry =>{
-let url = entry.toURL();
+//let url = entry.toURL();
 this.document.viewDocument('assets/imgs/Sucata/GG1224/InformativoTecnicoGG1225.pdf', 'application.pdf', {});
 });
 }

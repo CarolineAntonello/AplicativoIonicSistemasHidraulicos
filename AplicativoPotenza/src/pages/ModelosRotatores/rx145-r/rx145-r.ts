@@ -33,7 +33,7 @@ downloadPdf(){
 
 const transfer = this.transfer.create();
 transfer.download('http://potenzaindustria.com.br/wp-content/uploads/2017/10/Informativo-T%C3%A9cnico-RX145R.pdf', path + 'InformativoTecnicoRX145R.pdf').then(entry =>{
-let url = entry.toURL();
+//let url = entry.toURL();
 this.document.viewDocument('assets/imgs/Rotator/RX145R/InformativoTecnicoRX145R.pdf', 'application.pdf', {});
 });
 }

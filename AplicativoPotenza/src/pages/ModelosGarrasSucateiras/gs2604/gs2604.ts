@@ -33,7 +33,7 @@ downloadPdf(){
 
 const transfer = this.transfer.create();
 transfer.download('http://potenzaindustria.com.br/wp-content/uploads/2017/10/Informativo-T%C3%A9cnico-GS2604.pdf', path + 'InformativoTecnicoGS2604.pdf').then(entry =>{
-let url = entry.toURL();
+//let url = entry.toURL();
 this.document.viewDocument('assets/imgs/Sucata/GS2604/InformativoTecnicoGS2604.pdf', 'application.pdf', {});
 });
 }

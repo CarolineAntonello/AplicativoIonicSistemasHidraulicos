@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ActionSheetController, Platform } from 'ionic-angular';
+import { IonicPage, NavController, Platform } from 'ionic-angular';
 import { FileTransfer } from '@ionic-native/file-transfer';
 import { File } from '@ionic-native/file';
 import { DocumentViewer, DocumentViewerOptions } from '@ionic-native/document-viewer';
@@ -11,9 +11,9 @@ import { DocumentViewer, DocumentViewerOptions } from '@ionic-native/document-vi
 })
 export class Rx25TPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,
-    private document: DocumentViewer, private file: File,
-    private transfer: FileTransfer, private platform: Platform) {
+  constructor(public navCtrl: NavController,
+    public document: DocumentViewer, public file: File,
+    public transfer: FileTransfer, public platform: Platform) {
 }
 
 openLoadPdf(){
@@ -33,7 +33,7 @@ downloadPdf(){
 
 const transfer = this.transfer.create();
 transfer.download('http://potenzaindustria.com.br/wp-content/uploads/2017/10/Informativo-T%C3%A9cnico-RX06T-1.pdf', path + 'InformativoTecnicoRX25T.pdf').then(entry =>{
-let url = entry.toURL();
+//let url = entry.toURL();
 this.document.viewDocument('assets/imgs/Rotator/RX06T/InformativoTecnicoRX06T.pdf', 'application.pdf', {});
 });
 }

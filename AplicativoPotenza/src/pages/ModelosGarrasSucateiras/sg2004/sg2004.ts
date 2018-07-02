@@ -33,7 +33,7 @@ downloadPdf(){
 
 const transfer = this.transfer.create();
 transfer.download('http://potenzaindustria.com.br/wp-content/uploads/2017/10/Informativo-T%C3%A9cnico-SG2004.pdf', path + 'InformativoTecnicoSG2004.pdf').then(entry =>{
-let url = entry.toURL();
+//let url = entry.toURL();
 this.document.viewDocument('assets/imgs/Sucata/SG2004/InformativoTecnicoSG2004.pdf', 'application.pdf', {});
 });
 }

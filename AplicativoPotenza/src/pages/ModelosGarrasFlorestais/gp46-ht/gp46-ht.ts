@@ -33,7 +33,7 @@ downloadPdf(){
 
 const transfer = this.transfer.create();
 transfer.download('http://potenzaindustria.com.br/wp-content/uploads/2017/10/Informativo-T%C3%A9cnico-GP46HT-1.pdf', path + 'InformativoTecnicoGP46HT.pdf').then(entry =>{
-let url = entry.toURL();
+//let url = entry.toURL();
 this.document.viewDocument('assets/imgs/Florestal/GP46HT/InformativoTecnicoGP46HT.pdf', 'application.pdf', {});
 });
 }

@@ -33,7 +33,7 @@ downloadPdf(){
 
 const transfer = this.transfer.create();
 transfer.download('http://potenzaindustria.com.br/wp-content/uploads/2017/10/Informativo-T%C3%A9cnico-GS2400FM.pdf', path + 'InformativoTecnicoGS2400FM.pdf').then(entry =>{
-let url = entry.toURL();
+//let url = entry.toURL();
 this.document.viewDocument('assets/imgs/Sucata/GS2400FM/InformativoTecnicoeGS2400FM.pdf', 'application.pdf', {});
 });
 }
